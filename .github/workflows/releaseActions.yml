@@ -31,7 +31,7 @@ jobs:
           git config --global user.email 'unmeshtemkar@gmail.com'
           git add --all
           git commit -am "new version for actions 1"
-          git push origin main
+          git push https://UnmeshGitHub:${{ secrets.ACTIONS_PAT }}@github.com/unmeshtemkar/two_actions_one_repo.git main
 
       - name: Create new release
         id: create_release
