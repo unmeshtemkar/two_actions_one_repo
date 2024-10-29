@@ -26,7 +26,7 @@ jobs:
           ncc build index.js
 
       - name: Tag version commit
-         run: |
+        run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git add --all
