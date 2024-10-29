@@ -30,7 +30,7 @@ jobs:
           git config --global user.name 'UnmeshGitHub'
           git config --global user.email 'unmeshtemkar@gmail.com'
           git add --all
-          git commit -am "new version for actions"
+          git commit -am "new version for actions 1"
           git push origin main
 
       - name: Create new release
