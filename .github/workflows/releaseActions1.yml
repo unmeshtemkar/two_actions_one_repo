@@ -20,7 +20,7 @@ jobs:
 
       - name: Create dist/index.js using ncc tool
         run: |
-          cd act_3
+          cd act_4
           npm init -y
           npm i -g @vercel/ncc
           ncc build index.js
@@ -39,7 +39,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: v0.0.3
-          release_name: Release for act_3 v0.0.3
+          tag_name: v0.0.4
+          release_name: Release for act_4 v0.0.4
           draft: false
           prerelease: false
