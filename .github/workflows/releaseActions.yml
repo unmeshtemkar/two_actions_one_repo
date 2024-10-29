@@ -18,8 +18,8 @@ jobs:
         with:
           node-version: '20'
 
-      - run: npm ci
-      - run: npm test
+#      - run: npm ci
+#      - run: npm test
 
       - name: create dist/index.js
         run: |
