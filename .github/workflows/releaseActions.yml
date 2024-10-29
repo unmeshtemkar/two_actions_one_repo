@@ -18,7 +18,7 @@ jobs:
         with:
           node-version: '20'
 
-      - name: create dist/index.js
+      - name: Create dist/index.js
         run: |
           cd act_1
           npm init -y
