@@ -3,21 +3,24 @@ name: Release New Version
 on:
   workflow_dispatch
 
-
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout to actions repository
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
 
-#      - name: Set up Node.js
-#        uses: actions/setup-node@v4.1.0
+      - name: Setup Node.js with npm
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: npm ci
+      - run: npm test
 
-      - name: Install dependencies
+      - name: create dist/index.js
         run: |
           cd act_1
           npm init -y
@@ -29,7 +32,7 @@ jobs:
 #          git config --global user.name 'github-actions[bot]'
 #          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git add --all
-          git commit -m 'New action 1 version'
+          git commit -am "new version for actions"
           git push origin main
 
       - name: Create new release
@@ -43,12 +46,12 @@ jobs:
           draft: false
           prerelease: false
 
-      - name: Upload release asset
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./dist/my-action.zip
-          asset_name: my-action.zip
-          asset_content_type: application/zip
+#      - name: Upload release asset
+#        uses: actions/upload-release-asset@v1
+#        env:
+#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#        with:
+#          upload_url: ${{ steps.create_release.outputs.upload_url }}
+#          asset_path: ./dist/my-action.zip
+#          asset_name: my-action.zip
+#          asset_content_type: application/zip
