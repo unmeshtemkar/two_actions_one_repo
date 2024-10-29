@@ -13,11 +13,6 @@ jobs:
         with:
           fetch-depth: 0
 
-#      - name: Setup node
-#        uses: actions/setup-node@v4
-#        with:
-#          node-version: '20'
-
       - name: Create dist/index.js using ncc tool
         run: |
           cd act_4
