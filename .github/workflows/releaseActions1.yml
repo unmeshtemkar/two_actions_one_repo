@@ -16,7 +16,7 @@ jobs:
       - name: Create dist/index.js using ncc tool
         run: |
           cd act_4
-          npm init -y
+#          npm init -y
           npm i -g @vercel/ncc
           ncc build index.js
 
