@@ -1,7 +1,7 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ 638:
+/***/ 161:
 /***/ ((module) => {
 
 module.exports = eval("require")("@actions/core");
@@ -9,7 +9,7 @@ module.exports = eval("require")("@actions/core");
 
 /***/ }),
 
-/***/ 906:
+/***/ 169:
 /***/ ((module) => {
 
 module.exports = eval("require")("@actions/github");
@@ -56,8 +56,8 @@ module.exports = eval("require")("@actions/github");
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
-const core = __nccwpck_require__(638);
-const github = __nccwpck_require__(906);
+const core = __nccwpck_require__(161);
+const github = __nccwpck_require__(169);
 
 try {
   // `who-to-greet` input defined in action metadata file
